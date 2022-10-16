@@ -21,3 +21,28 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Serenity-BDD
+*/target/
+*/logs/
+
+# Intellij
+*/.idea/
+*../.idea/
+*.idea/
+*/out/
+
+# Gradle
+*/.gradle/
+*.gradle/
+*/build/
+*gradle.properties
+
+# Ignore Gradle GUI config
+*gradle-app.setting
+
+# Not ignoring Gradle wrapper jar file (.jar files are usually ignored)
+*!/gradle/wrapper/gradle-wrapper.jar
+
+# Cache of project
+*.gradletasknamecache
