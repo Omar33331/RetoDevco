@@ -10,6 +10,8 @@ public enum StringConstants {
     CHILDREN("children"),
     BEDROOMS("bedrooms"),
     TIME_FLOW("timeFlow"),
+    ORIGIN_SHORT("originShort"),
+    DESTINY_SHORT("destinyShort"),
     TIME_FROMAT("HHmmss"),
     DATE_FLOW("dateFlow"),
     DATE_FORMAT("yyyyMMdd"),
