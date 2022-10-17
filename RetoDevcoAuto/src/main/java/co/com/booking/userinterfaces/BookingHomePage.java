@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 @DefaultUrl("https://www.booking.com/")
 public class BookingHomePage extends PageObject {
 
-    public static final Target DESTINY_LABEL = Target.the("Label to search the destiny ").located(By.id("ss"));
+    public static final Target DESTINY_LABEL = Target.the("Label to search the destiny ").located(By.xpath("//label/input[@id='ss']"));
     public static final Target START_DATE_LABEL = Target.the("Start date field").located(By.xpath("//div[@class='xp__dates-inner xp__dates__checkin']"));
     public static final Target SELECT_DATE = Target.the("Select te date in the calendar").locatedBy("//ancestor::td[@data-date='{0}']");
     public static final Target NEXT_MONTH_ARROW = Target.the("Arrow to select the next month").located(By.xpath("//div[contains(@data-bui-ref,'calendar-next')]"));
@@ -26,4 +26,6 @@ public class BookingHomePage extends PageObject {
     public static final Target SEARCH_BUTTON = Target.the("Button to perform the search").located(By.xpath("//button/span[@class = \"js-sb-submit-text \"]"));
     public static final Target SEARCH_RESULT = Target.the("Search result").located(By.xpath("//div/h1[@class='e1f827110f d3a14d00da']"));
     public static final Target SEARCH_RESULT_ERROR = Target.the("Error message in the search").located(By.xpath("(//div/div[@class='fe_banner__message'])[2]"));
+    public static final Target FLIGHTS_BUTTON = Target.the("Button to enter the flights section").located(By.xpath("//li/a[@data-decider-header=\"flights\"]"));
+
 }
