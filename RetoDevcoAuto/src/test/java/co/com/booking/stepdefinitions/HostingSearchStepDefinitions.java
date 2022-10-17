@@ -3,7 +3,7 @@ package co.com.booking.stepdefinitions;
 import co.com.booking.exceptions.SearchException;
 import co.com.booking.questions.TheError;
 import co.com.booking.questions.TheResult;
-import co.com.booking.tasks.Load;
+import co.com.booking.tasks.initialsetup.Load;
 import co.com.booking.tasks.Search;
 import co.com.booking.tasks.initialsetup.LoadBooking;
 import cucumber.api.java.en.Given;
