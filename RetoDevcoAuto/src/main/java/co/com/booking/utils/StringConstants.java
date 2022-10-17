@@ -9,7 +9,8 @@ public enum StringConstants {
     ADULTS("adults"),
     CHILDREN("children"),
     BEDROOMS("bedrooms"),
-    ACOMODATIONS_FOUND("alojamientos encontrados");
+    ACOMODATIONS_FOUND("alojamientos encontrados"),
+    ERROR_MESSAGE("Lo sentimos");
 
     private String value;
 

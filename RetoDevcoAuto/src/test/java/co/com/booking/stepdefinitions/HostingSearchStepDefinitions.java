@@ -1,5 +1,7 @@
 package co.com.booking.stepdefinitions;
 
+import co.com.booking.exceptions.SearchException;
+import co.com.booking.questions.TheError;
 import co.com.booking.questions.TheResult;
 import co.com.booking.tasks.Load;
 import co.com.booking.tasks.Search;
@@ -10,6 +12,7 @@ import cucumber.api.java.en.When;
 import java.util.List;
 import java.util.Map;
 
+import static co.com.booking.exceptions.SearchException.FAILED_SEARCH;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -35,6 +38,11 @@ public class HostingSearchStepDefinitions {
 
     @Then("^he looks at the hosting options$")
     public void heLooksAtTheHostingOptions() {
-        theActorInTheSpotlight().should(seeThat(TheResult.ofSearch()));
+        theActorInTheSpotlight().should(seeThat(TheResult.ofSearch()).orComplainWith(SearchException.class, FAILED_SEARCH));
+    }
+
+    @Then("^he looks the error message$")
+    public void heLooksTheErrorMessage() {
+        theActorInTheSpotlight().should(seeThat(TheError.Message()).orComplainWith(SearchException.class, FAILED_SEARCH));
     }
 }
