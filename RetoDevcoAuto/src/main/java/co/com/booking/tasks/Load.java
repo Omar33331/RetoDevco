@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.Task;
 import static co.com.booking.models.Data.getMap;
 import static co.com.booking.models.Data.setMap;
 import static co.com.booking.utils.ActualDate.getActualDate;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Load implements Task {
 
