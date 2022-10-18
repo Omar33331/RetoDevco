@@ -12,7 +12,7 @@ Feature: Make a search of hosting in booking page
     Examples:
       |   destiny   |  startDate  |  endDate   | adults | children | bedrooms |
       |  Medellín   | 2022-11-20  | 2022-12-05 |   1    |    0     |    1     |
-      |  Cartagena  | 2022-10-20  | 2022-10-22 |   4    |    0     |    4     |
+      |  Cartagena  | 2022-11-16  | 2022-11-22 |   4    |    0     |    4     |
       |   Bogota    | 2022-12-25  | 2023-01-07 |   2    |    0     |    2     |
 
 

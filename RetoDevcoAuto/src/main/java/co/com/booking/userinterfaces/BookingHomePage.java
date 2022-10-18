@@ -26,6 +26,7 @@ public class BookingHomePage extends PageObject {
     public static final Target SEARCH_BUTTON = Target.the("Button to perform the search").located(By.xpath("//button/span[@class = \"js-sb-submit-text \"]"));
     public static final Target SEARCH_RESULT = Target.the("Search result").located(By.xpath("//div/h1[@class='e1f827110f d3a14d00da']"));
     public static final Target SEARCH_RESULT_ERROR = Target.the("Error message in the search").located(By.xpath("(//div/div[@class='fe_banner__message'])[2]"));
-    public static final Target FLIGHTS_BUTTON = Target.the("Button to enter the flights section").located(By.xpath("//li/a[@data-decider-header=\"flights\"]"));
+    public static final Target FLIGHTS_BUTTON = Target.the("Button to enter the flights section").located(By.xpath("//li/a[@data-decider-header='flights']"));
+    public static final Target TOURIST_BUTTON = Target.the("Button to enter the tourist attraction section").located(By.xpath("//li/a[@data-decider-header='attractions']"));
 
 }

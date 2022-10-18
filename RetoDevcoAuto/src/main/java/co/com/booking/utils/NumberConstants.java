@@ -3,6 +3,7 @@ package co.com.booking.utils;
 public enum NumberConstants {
 
     ZERO(0),
+    ONE(1),
     TWO(2),
     THREE(3);
 
