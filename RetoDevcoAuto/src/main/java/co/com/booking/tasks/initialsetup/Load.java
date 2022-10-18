@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.thucydides.core.annotations.Step;
 
 import static co.com.booking.models.Data.getMap;
 import static co.com.booking.models.Data.setMap;
@@ -30,6 +31,7 @@ public class Load implements Task {
     }
 
     @Override
+    @Step("{1} load the necessary data for the execution of the test")
     public <T extends Actor> void performAs(T actor) {
         if(!data.isEmpty()){
             Set<Map.Entry<String,Object>> setMapAux = data.get(ZERO.getValue()).entrySet();

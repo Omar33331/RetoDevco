@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.type.Type;
+import net.thucydides.core.annotations.Step;
 
 import static co.com.booking.models.Data.take;
 import static co.com.booking.userinterfaces.BookingHomePage.ADD_ADULTS;
@@ -38,6 +39,7 @@ public class Search implements Task {
     }
 
     @Override
+    @Step("{2} enter the information to search for accommodation")
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(

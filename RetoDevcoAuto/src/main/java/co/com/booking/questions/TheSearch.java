@@ -2,6 +2,7 @@ package co.com.booking.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.thucydides.core.annotations.Step;
 
 import static co.com.booking.models.Data.take;
 import static co.com.booking.userinterfaces.FlightsPage.SEARCH_RESULT_DESTINY;
@@ -16,6 +17,7 @@ public class TheSearch implements Question<Boolean> {
 
 
     @Override
+    @Step("{3} validate the search result")
     public Boolean answeredBy(Actor actor) {
         origin = SEARCH_RESUL_ORIGIN.resolveFor(actor).getText();
         destiny = SEARCH_RESULT_DESTINY.resolveFor(actor).getText();

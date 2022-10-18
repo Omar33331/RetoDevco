@@ -9,12 +9,11 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.actions.type.Type;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.Keys;
 
 import static co.com.booking.models.Data.take;
 import static co.com.booking.userinterfaces.BookingHomePage.FLIGHTS_BUTTON;
-import static co.com.booking.userinterfaces.BookingHomePage.NEXT_MONTH_ARROW;
-import static co.com.booking.userinterfaces.BookingHomePage.SELECT_DATE;
 import static co.com.booking.userinterfaces.FlightsPage.ADD_ADULTS_FLIGHT;
 import static co.com.booking.userinterfaces.FlightsPage.AMOUNT_OF_ADULTS;
 import static co.com.booking.userinterfaces.FlightsPage.DESTINY_SEARCH;
@@ -29,7 +28,6 @@ import static co.com.booking.userinterfaces.FlightsPage.SEARCH_FLIGHTS_BUTTON;
 import static co.com.booking.userinterfaces.FlightsPage.SELECT_DATE_FLIGHT;
 import static co.com.booking.userinterfaces.FlightsPage.SELECT_PEOPLE;
 import static co.com.booking.userinterfaces.FlightsPage.START_DATE_TRAVEL;
-import static co.com.booking.utils.NumberConstants.THREE;
 import static co.com.booking.utils.NumberConstants.TWO;
 import static co.com.booking.utils.StringConstants.ADULTS;
 import static co.com.booking.utils.StringConstants.DESTINY;
@@ -37,12 +35,12 @@ import static co.com.booking.utils.StringConstants.END_DATE;
 import static co.com.booking.utils.StringConstants.ORIGIN;
 import static co.com.booking.utils.StringConstants.START_DATE;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotPresent;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 
 public class EnterFlight implements Task {
 
     @Override
+    @Step("{2} enter the information to search for the flight")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(FLIGHTS_BUTTON),

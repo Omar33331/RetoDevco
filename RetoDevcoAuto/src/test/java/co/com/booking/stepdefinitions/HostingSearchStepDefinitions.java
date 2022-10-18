@@ -38,11 +38,15 @@ public class HostingSearchStepDefinitions {
 
     @Then("^he looks at the hosting options$")
     public void heLooksAtTheHostingOptions() {
-        theActorInTheSpotlight().should(seeThat(TheResult.ofSearch()).orComplainWith(SearchException.class, FAILED_SEARCH));
+        theActorInTheSpotlight().should(seeThat(
+                TheResult.ofSearch()).orComplainWith(
+                        SearchException.class, FAILED_SEARCH));
     }
 
     @Then("^he looks the error message$")
     public void heLooksTheErrorMessage() {
-        theActorInTheSpotlight().should(seeThat(TheError.Message()).orComplainWith(SearchException.class, FAILED_SEARCH));
+        theActorInTheSpotlight().should(seeThat(
+                TheError.Message()).orComplainWith(
+                        SearchException.class, FAILED_SEARCH));
     }
 }
